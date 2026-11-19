@@ -1,13 +1,21 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package guiepitesekeslehetosegek;
 
-/**
- *
- * @author bertok.marcell
- */
-public class ClassExtendJFrame {
+import java.awt.GraphicsConfiguration;
+import java.awt.HeadlessException;
+import javax.swing.JFrame;
+
+public class ClassExtendJFrame extends JFrame{
+    private JFrame frame;
+
+    public ClassExtendJFrame() {
+        frame.setTitle("extendeles");
+        frame.setSize(600,600);
+        frame.setDefaultCloseOperation(frame.EXIT_ON_CLOSE);
+        //frame = new JFrame("extndeles");
+        frame.setVisible(true);
+    }
+
+    
     
 }

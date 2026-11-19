@@ -10,7 +10,10 @@ import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
+import javax.swing.border.BevelBorder;
+import javax.swing.border.Border;
 
 public class NewClass {
     public static void main(String[] args) {
@@ -23,6 +26,9 @@ public class NewClass {
                 JFrame frame=new JFrame("GUI KÓD");
                 frame.setSize(600, 400);
                 frame.setDefaultCloseOperation(frame.EXIT_ON_CLOSE);
+                frame.setLayout(new FlowLayout());
+                JPanel p = new JPanel();
+                 
                 //frame.setLayout(new BoxLayout(frame.getContentPane(),  BoxLayout.X_AXIS));
                 frame.setLayout(new java.awt.GridLayout(3, 3));
                 frame.setVisible(true);
@@ -36,13 +42,15 @@ public class NewClass {
                     @Override
                     public void actionPerformed(ActionEvent e){
                         JOptionPane.showMessageDialog(frame,"kilepes");
+                       
                     }
                 
                 });
-                
-                frame.add(btn);
-                frame.add(btn2);
-                frame.add(btn3);
+                p.setBorder(new BevelBorder(BevelBorder.RAISED));
+                p.add(btn);
+                p.add(btn2);
+                p.add(btn3);
+                frame.add(p);
                 
                 
             }
